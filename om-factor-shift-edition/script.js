@@ -1012,9 +1012,6 @@ function bup(x,spectate=0) {
     if ((game.boosters>=bupUpgradeCosts[x-1] || x == 4 && game.factorShifts >= 50) && game.challenge != 6 && game.challenge != 7) {
       if (!(x==12 && !(getSumOfChallenges() >= 7)) && !(x==16 && !(getSumOfChallenges() >= 23)) && (x<4.5||game.upgrades.includes(x-4))) {
         if (spectate==0) {
-          if (x==4) {
-            alert("Sorry, but you've reached the end of what I've programmed... I might update this to add more content later, no guarantees though.");
-          } else {
             if (x%4 != 0) game.boosters -= bupUpgradeCosts[x-1]
             game.upgrades.push(x)
             document.getElementById("bup" + (x)).classList.remove("canbuy")
