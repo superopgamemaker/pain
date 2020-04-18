@@ -335,6 +335,10 @@ function loop(ms) {
   if (game.leastBoost=="null") game.leastBoost=Infinity
   if (typeof game.leastBoost=="undefined") game.leastBoost=Infinity
   game.collapseTime += ms/1000
+  if (game.upgrades.includes(4))
+  {
+	  game.base = 5;
+  }
   if (game.upgrades.includes(13))
   {
     if (game.upgrades.includes(15))
